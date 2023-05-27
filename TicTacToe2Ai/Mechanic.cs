@@ -10,12 +10,13 @@ namespace TicTacToe2Ai
 {
     public static class Mechanic
     {
-        public static void Newgame(PictureBox[,] MyTable)
+        public static void Newgame(PictureBox[,] MyTable, ref int flags)
         {
             foreach(PictureBox X in MyTable)
             {
                 X.Image = null;
-                X.Name = null;;
+                X.Name = null;
+                flags = 1;
             }
         }
 
@@ -35,32 +36,34 @@ namespace TicTacToe2Ai
                             if (CHeckIfWins(MyTable, number, flags))
                             {
                                 MessageBox.Show("KÓłko wygrało!!");
-                                Newgame(MyTable);
+                                Newgame(MyTable, ref flags);
                                 flags = 1;
                             }
                             else if(CheckifDraw(MyTable))
                             {
                                 MessageBox.Show("Remis!!");
-                                Newgame(MyTable);
+                                Newgame(MyTable, ref flags);
                                 flags = 1;
                             }
                             else
                                 flags = 0;
-
-                            AI.RandomMove(MyTable, flags, number);
-                            if (CHeckIfWins(MyTable, number, flags))
+                            if (flags == 0)
                             {
-                                MessageBox.Show("Krzyżyk wygrał!!");
-                                Newgame(MyTable);
+                                AI.MakeBestMove(MyTable, number);
+                                if (CHeckIfWins(MyTable, number, flags))
+                                {
+                                    MessageBox.Show("Krzyżyk wygrał!!");
+                                    Newgame(MyTable, ref flags);
+                                }
+                                else if (CheckifDraw(MyTable))
+                                {
+                                    MessageBox.Show("Remis!!");
+                                    Newgame(MyTable, ref flags);
+                                    flags = 1;
+                                }
+                                else
+                                    flags = 1;
                             }
-                            else if (CheckifDraw(MyTable))
-                            {
-                                MessageBox.Show("Remis!!");
-                                Newgame(MyTable);
-                                flags = 1;
-                            }
-                            else
-                                flags = 1;
                         }
 
                     };
@@ -81,13 +84,13 @@ namespace TicTacToe2Ai
                             if (CHeckIfWins(MyTable, number, flags))
                             {
                                 MessageBox.Show("KÓłko wygrało!!");
-                                Newgame(MyTable);
+                                Newgame(MyTable, ref flags);
                                 flags = 1;
                             }
                             else if (CheckifDraw(MyTable))
                             {
                                 MessageBox.Show("Remis!!");
-                                Newgame(MyTable);
+                                Newgame(MyTable, ref flags);
                                 flags = 1;
                             }
                             else
@@ -100,13 +103,13 @@ namespace TicTacToe2Ai
                             if (CHeckIfWins(MyTable, number, flags))
                             {
                                 MessageBox.Show("Krzyżyk wygrał!!");
-                                Newgame(MyTable);
+                                Newgame(MyTable, ref flags);
                                 flags = 1;
                             }
                             else if (CheckifDraw(MyTable))
                             {
                                 MessageBox.Show("Remis!!");
-                                Newgame(MyTable);
+                                Newgame(MyTable, ref flags);
                                 flags = 1;
                             }
                             else
@@ -139,10 +142,7 @@ namespace TicTacToe2Ai
                         return true;
                 }
                 sum = 0;
-                //sum = 0;
             }
-           // if (sum == number)
-           //     return true;
             sum = 0;
             for (int x = 0; x < number; x++)
             {
@@ -163,8 +163,6 @@ namespace TicTacToe2Ai
                 }
                 sum = 0;
             }
-          //  Xif (sum == number)
-          //      return true;
             sum = 0;
                 for (int y = 0; y < number; y++)
                 {
@@ -181,14 +179,30 @@ namespace TicTacToe2Ai
                 }
                 if (sum == number)
                     return true;
-                return false;
+            sum = 0;
+            for (int y = number - 1; y >= 0; y--)
+            {
+                if (flags == 1)
+                {
+                    if (MyTable[number - 1 - y, y].Name == "O")
+                        sum++;
+                }
+                else if (flags == 0)
+                {
+                    if (MyTable[number - 1 - y, y].Name == "X")
+                        sum++;
+                }
+            }
+            if (sum == number)
+                return true;
+            return false;
         }
 
         public static bool CheckifDraw(PictureBox[,] MyBoard)
         {
             foreach(var x in MyBoard)
             {
-                if (x.Image == null)
+                if (x.Name != "X" && x.Name != "O")
                     return false;
             }
             return true;

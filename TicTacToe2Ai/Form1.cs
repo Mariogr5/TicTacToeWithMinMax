@@ -25,7 +25,7 @@ namespace TicTacToe2Ai
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            int number = 5;
+            int number = 3;
             var MyBoard = new Board(number);
             int flags = 1;
             //MyBoard.MakeBard(panel1);
@@ -35,8 +35,8 @@ namespace TicTacToe2Ai
             panel1.Location = new Point(0, 0);
             MyBoard.MakeBard(panel1);
             var MyTableofPictureBoxes = MyBoard.MakeFields(panel1);
-            Mechanic.Newgame(MyTableofPictureBoxes);
-            Mechanic.ClickWithPlayer(MyTableofPictureBoxes, flags, number);
+            Mechanic.Newgame(MyTableofPictureBoxes, ref flags);
+            Mechanic.ClickWithBot(MyTableofPictureBoxes, flags, number);
             //MessageBox.Show("Siema");
             //Xforeach(PictureBox pictureBox in X)
             //{

@@ -21,7 +21,6 @@ namespace TicTacToe2Ai
 
         public void MakeBard(Panel panel1)
         {
-            //var MyBoard = new PictureBox[panel1.Width, panel1.Width];
             int iterator = panel1.Width;
             for (int i = 0; i < iterator; i+=10)
             {
@@ -35,25 +34,16 @@ namespace TicTacToe2Ai
                     if(i % 100 == 0 && i != 0 && i != panel1.Width)
                     {
                         NewObject.Location = new Point(i, j);
-                        //MyBoard[i, j] = NewObject;
                         panel1.Controls.Add(NewObject);
                     }
                     if(j % 100 == 0 && j != 0 && j != panel1.Width)
                     {
                         NewObject.Location = new Point(i, j);
-                        //MyBoard[i, j] = NewObject;
                         panel1.Controls.Add(NewObject);
                     }
 
                 }
             }
-            //return MyBoard;
-            //for(int i = 0; i < 3; i++)
-            //    for(int j = 0; j  < 3; j++)
-            //    {
-            //        var NewObject = new PictureBox();
-            //        NewObject
-            //    }
         }
 
         public PictureBox[,] MakeFields(Panel panel1)
@@ -78,12 +68,6 @@ namespace TicTacToe2Ai
                     MyFields[i, j] = NewObject;
                     panel1.Controls.Add(NewObject);
                 }
-            // MyFields[1, 1] = new PictureBox();
-           // MyFields[1, 1].Image = Resources.Circleeee;
-           //// MyFields[1, 1].SizeMode = PictureBoxSizeMode.StretchImage;
-           // MyFields[2, 2].Image = Resources.X;
-           // MyFields[2, 2].SizeMode = PictureBoxSizeMode.StretchImage;
-            //MyFields[2,2].BackColor = Color.Red;
             return MyFields;
         
         }

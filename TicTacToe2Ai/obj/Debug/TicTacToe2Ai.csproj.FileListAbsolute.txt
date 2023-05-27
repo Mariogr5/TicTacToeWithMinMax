@@ -9,3 +9,14 @@ C:\Users\mario\Desktop\Strukturydanych\TicTacToe\TicTacToe2Ai\obj\Debug\TicTacTo
 C:\Users\mario\Desktop\Strukturydanych\TicTacToe\TicTacToe2Ai\obj\Debug\TicTacToe2Ai.csproj.CoreCompileInputs.cache
 C:\Users\mario\Desktop\Strukturydanych\TicTacToe\TicTacToe2Ai\obj\Debug\TicTacToe2Ai.exe
 C:\Users\mario\Desktop\Strukturydanych\TicTacToe\TicTacToe2Ai\obj\Debug\TicTacToe2Ai.pdb
+C:\Users\mario\Desktop\Strukturydanych\TicTacToe\TicTacToeWithMinMax\TicTacToe2Ai\bin\Debug\TicTacToe2Ai.exe.config
+C:\Users\mario\Desktop\Strukturydanych\TicTacToe\TicTacToeWithMinMax\TicTacToe2Ai\bin\Debug\TicTacToe2Ai.exe
+C:\Users\mario\Desktop\Strukturydanych\TicTacToe\TicTacToeWithMinMax\TicTacToe2Ai\bin\Debug\TicTacToe2Ai.pdb
+C:\Users\mario\Desktop\Strukturydanych\TicTacToe\TicTacToeWithMinMax\TicTacToe2Ai\obj\Debug\TicTacToe2Ai.csproj.AssemblyReference.cache
+C:\Users\mario\Desktop\Strukturydanych\TicTacToe\TicTacToeWithMinMax\TicTacToe2Ai\obj\Debug\TicTacToe2Ai.csproj.SuggestedBindingRedirects.cache
+C:\Users\mario\Desktop\Strukturydanych\TicTacToe\TicTacToeWithMinMax\TicTacToe2Ai\obj\Debug\TicTacToe2Ai.Form1.resources
+C:\Users\mario\Desktop\Strukturydanych\TicTacToe\TicTacToeWithMinMax\TicTacToe2Ai\obj\Debug\TicTacToe2Ai.Properties.Resources.resources
+C:\Users\mario\Desktop\Strukturydanych\TicTacToe\TicTacToeWithMinMax\TicTacToe2Ai\obj\Debug\TicTacToe2Ai.csproj.GenerateResource.cache
+C:\Users\mario\Desktop\Strukturydanych\TicTacToe\TicTacToeWithMinMax\TicTacToe2Ai\obj\Debug\TicTacToe2Ai.csproj.CoreCompileInputs.cache
+C:\Users\mario\Desktop\Strukturydanych\TicTacToe\TicTacToeWithMinMax\TicTacToe2Ai\obj\Debug\TicTacToe2Ai.exe
+C:\Users\mario\Desktop\Strukturydanych\TicTacToe\TicTacToeWithMinMax\TicTacToe2Ai\obj\Debug\TicTacToe2Ai.pdb
