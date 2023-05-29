@@ -71,5 +71,11 @@ namespace TicTacToe2Ai
             return MyFields;
         
         }
+
+
+        public void Clearpanel(Panel panel1)
+        {
+            panel1.Controls.Clear();
+        }
     }
 }

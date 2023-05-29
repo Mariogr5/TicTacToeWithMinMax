@@ -123,6 +123,7 @@ namespace TicTacToe2Ai
 
         public static bool CHeckIfWins(PictureBox[,] MyTable, int number, int flags)
         {
+            //number = 3;
             int sum = 0;
             for (int x = 0; x < number; x++)
             {

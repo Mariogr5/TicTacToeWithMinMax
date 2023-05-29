@@ -130,6 +130,11 @@ namespace TicTacToe2Ai
                 return score;
             if (IsMovePossible(MyTab) == false)
                 return 0;
+            if (depth > 3 && number != 3)
+            {
+                score = BoardOpinion(MyTab, number);
+                return score;
+            }
             if (IsMax)
             {
                 int best = -1000;
@@ -178,6 +183,39 @@ namespace TicTacToe2Ai
                 }
                 return best;
             }
+        }
+
+
+
+
+        public static int BoardOpinion(PictureBox[,] MyTab, int number)
+        {
+            int sum = 0;
+            for(int i = 0; i < number; i++)
+            {
+                for(int j = 0; j < number; j++)
+                {
+                    if (j != number - 2 && j != number - 1)
+                    {
+                        if (MyTab[i, j].Name == "X" && MyTab[i, j + 1].Name == "X" && MyTab[i, j + 2].Name == "X")
+                            return 5;
+                        if (MyTab[i, j].Name == "O" && MyTab[i, j + 1].Name == "O" && MyTab[i, j + 2].Name == "O")
+                            return -5;
+                    }
+                    else if (j != 1 && j != 0)
+                    {
+                        if (MyTab[i, j].Name == "X" && MyTab[i, j - 1].Name == "X" && MyTab[i, j - 2].Name == "X")
+                            return 5;
+                        if (MyTab[i, j].Name == "O" && MyTab[i, j - 1].Name == "O" && MyTab[i, j - 2].Name == "O")
+                            return -5;
+                    }
+                    else
+                        continue;
+                    
+                }
+            }
+            return sum;
+
         }
     }
 }
