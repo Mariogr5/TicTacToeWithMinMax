@@ -1,1 +1,1 @@
-# This is the TicTacToe game with Both. The Both is using MinMax Algorithm with Alpha-Beta pruning.
+# This is the TicTacToe game with Bot. The Bot is using MinMax Algorithm with Alpha-Beta pruning.
